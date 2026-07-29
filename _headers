@@ -1,9 +1,52 @@
-# _headers - Proteção de SEO
-
-/robots.txt
-  X-Robots-Tag: noindex
+# ============================================================
+# CONFIGURAÇÃO DE SEGURANÇA - odonto.rsbprime.com.br
+# ============================================================
 
 /*
-  X-Content-Type-Options: nosniff
+  # Força HTTPS e protege contra downgrade de protocolo
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+  # Previne clickjacking (ataques com iframe)
   X-Frame-Options: DENY
+
+  # Previne MIME type sniffing
+  X-Content-Type-Options: nosniff
+
+  # Controla informações do referenciador
   Referrer-Policy: strict-origin-when-cross-origin
+
+  # Controla quais recursos o navegador pode carregar (proteção XSS)
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+
+  # Controla permissões de recursos do navegador
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+
+# ============================================================
+# BLOQUEIO DE INDEXAÇÃO DA VERSÃO .pages.dev (OPCIONAL)
+# ============================================================
+
+https://odonto.robson-sacrament.workers.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+# ============================================================
+# CACHE PARA ARQUIVOS ESTÁTICOS (otimização de performance)
+# ============================================================
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ============================================================
+# BLOQUEIO DE ACESSO A PASTAS SENSÍVEIS (OPCIONAL)
+# ============================================================
+
+/.git/*
+  X-Robots-Tag: noindex, nofollow
+
+/.vscode/*
+  X-Robots-Tag: noindex, nofollow
