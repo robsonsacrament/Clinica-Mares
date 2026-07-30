@@ -12,56 +12,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://odonto.rsbprime.com.br">
 
+    <!-- ========== CSS CRÍTICO INLINE ========== -->
     <style>
-/* ===== CSS CRÍTICO ===== */
-.header{position:sticky;top:0;z-index:40;background:rgba(247,245,239,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(219,213,204,.7);transition:box-shadow .3s}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1280px;margin:0 auto;padding:0 24px}
-.logo{display:flex;align-items:baseline;gap:6px}
-.logo-name{font-family:'Playfair Display',ui-serif,Georgia,serif;font-size:22px;letter-spacing:-.02em;color:#2a2824}
-.logo-tagline{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.22em;color:#8c8070}
-.hero-premium{position:relative;padding:60px 0 80px;overflow:hidden;background:#2a2420;border-bottom:1px solid rgba(219,213,204,.7)}
-.hero-background{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
-.hero-background img{width:100%;height:100%;object-fit:cover}
-.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(42,40,36,.85) 0,rgba(42,40,36,.4) 100%);z-index:1}
-.hero-premium .container{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:0 24px}
-.hero-grid{display:grid;gap:40px;align-items:center}
-.hero-content{display:flex;flex-direction:column;gap:20px}
-.hero-badge{display:inline-flex;align-items:center;gap:12px;font-size:11px;text-transform:uppercase;letter-spacing:.28em;color:rgba(255,255,255,.7)}
-.hero-badge::before{content:'';display:inline-block;width:32px;height:1px;background:rgba(255,255,255,.4)}
-.hero-title{font-family:'Playfair Display',ui-serif,Georgia,serif;font-size:40px;font-weight:500;line-height:1.05;letter-spacing:-.015em;color:#fff}
-.hero-text{font-size:18px;line-height:1.7;color:rgba(255,255,255,.8);max-width:560px}
-.hero-text strong{color:#fff}
-.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:4px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 28px;border-radius:9999px;font-size:14px;font-weight:500;font-family:'Inter',ui-sans-serif,system-ui,sans-serif;border:none;cursor:pointer;transition:.3s cubic-bezier(.16,1,.3,1);text-decoration:none;line-height:1}
-.btn-primary{background:#5f8b7a;color:#f7f5ef;box-shadow:0 4px 10px rgba(61,107,90,.2)}
-.btn-primary:hover{background:#3d6b5a;transform:translateY(-3px) scale(1.02);box-shadow:0 8px 25px rgba(61,107,90,.4)}
-.btn-hero{padding:14px 36px;font-size:15px;font-weight:600}
-.btn-link-hero{font-size:14px;color:rgba(255,255,255,.8);text-decoration:underline;text-underline-offset:6px;text-decoration-color:rgba(255,255,255,.3);transition:color .2s,text-decoration-color .2s}
-.btn-link-hero:hover{color:#fff;text-decoration-color:rgba(255,255,255,.6)}
-.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:480px;padding-top:32px;margin-top:8px;border-top:1px solid rgba(255,255,255,.15)}
-.hero-stat{display:flex;flex-direction:column;gap:2px}
-.hero-stat-number{display:block;font-family:'Playfair Display',ui-serif,Georgia,serif;font-size:28px;color:#fff}
-.hero-stat-label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.5)}
-.hero-image-wrapper{position:relative;display:flex;justify-content:flex-end;align-items:center;min-height:400px}
-.hero-image-backdrop{position:absolute;width:90%;height:85%;background:#f3ece5;border-radius:60px 0;top:8%;right:-4%;z-index:0}
-.hero-image-frame{position:relative;z-index:1;width:92%;aspect-ratio:4/5;border-radius:8px 48px;overflow:hidden;box-shadow:0 35px 80px rgba(0,0,0,.35);transition:box-shadow .4s,transform .4s}
-.hero-image{width:100%;height:100%;object-fit:cover;display:block}
-.hero-image-caption{position:absolute;bottom:24px;left:24px;right:24px;background:rgba(250,248,244,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:16px 20px;border-radius:4px;max-width:260px;box-shadow:0 4px 20px rgba(0,0,0,.06)}
-.hero-image-caption .caption-text{font-family:'Playfair Display',ui-serif,Georgia,serif;font-size:14px;font-style:italic;line-height:1.4;color:#2a2824;margin:0}
-.hero-image-caption .caption-author{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:#8c8070;margin-top:6px}
-@media (min-width:1024px){.hero-premium{padding:100px 0 120px}.hero-title{font-size:64px}}
-@media (max-width:767px){.hero-premium{padding:40px 0 56px!important}.hero-title{font-size:24px!important;line-height:1.1!important}.hero-text{font-size:14px!important;line-height:1.5!important}}
-</style>
+        /* ===== FONT-DISPLAY: SWAP ===== */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-display: swap;
+        }
+        /* ... resto do CSS crítico ... */
+    </style>
 
-    <!-- ========== PRÉ-CONEXÕES ========== -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- ========== FONTES - CARREGAMENTO ASSÍNCRONO ========== -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-<!-- ========== FONTES - APENAS PESOS ESSENCIAIS ========== -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-   
-<!-- ========== CSS ASSÍNCRONO ========== -->
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- ========== CSS ASSÍNCRONO ========== -->
     <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="css/style.min.css">
@@ -129,14 +103,6 @@
 
 </head>
 <body>
-    <!-- ... SEU CONTEÚDO ... -->
-
-    <!-- ========== SCRIPTS COM DEFER ========== -->
-    <script src="js/main.js" defer></script>
-    <script src="js/before-after.js" defer></script>
-    <script src="js/faq.js" defer></script>
-</body>
-</html>
 
     <!-- ============================================================ -->
     <!-- HEADER / NAVEGAÇÃO -->
@@ -270,7 +236,7 @@
         <!-- ============================================================ -->
         <section class="hero hero-premium" id="top">
             <div class="hero-background">
-                <img src="assets/images/clinicapalhocaimagem.webp" alt="Consultório da Clínica Marés com luz natural" loading="eager" fetchpriority="high" />
+                <img src="assets/images/clinicapalhocaimagem.webp" alt="Consultório da Clínica Marés com luz natural" loading="eager" fetchpriority="high" width="1920" height="1080" />
                 <div class="hero-overlay"></div>
             </div>
             <div class="container">
@@ -278,7 +244,7 @@
                     <div class="hero-content scroll-reveal">
                         <span class="hero-badge">📍 Clínica Marés · Palhoça</span>
                         <h1 class="hero-title" id="typewriter-title">
-                            <span class="typewriter-text"></span>
+                            <span class="typewriter-text">Especialista em implantes, estética e ortodontia em Palhoça.</span>
                         </h1>
                         <p class="hero-text">
                             <strong>Você entende cada etapa, vê a simulação do resultado e só então decide.</strong> Atendimento com <strong>planejamento 3D</strong>, <strong>cirurgia guiada</strong> e avaliação inicial detalhada — para você entender o tratamento antes de decidir.
@@ -308,7 +274,6 @@
                     <div class="hero-image-wrapper scroll-reveal scroll-reveal-delay-2">
                         <div class="hero-image-backdrop"></div>
                         <div class="hero-image-frame">
-                            <!-- IMAGEM DO CONSULTÓRIO - CARREGADA UMA ÚNICA VEZ -->
                             <img src="assets/images/clinicapalhocaimagem.webp" alt="Consultório da Clínica Marés" loading="lazy" class="hero-image" width="800" height="1000" />
                             <div class="hero-image-caption">
                                 <p class="caption-text">"Ambiente moderno, cuidado humano e precisão técnica."</p>
@@ -361,7 +326,7 @@
 
                 <div class="services-divider"></div>
 
-                <!-- ✅ GRID DE SERVIÇOS -->
+                <!-- GRID DE SERVIÇOS -->
                 <div class="services-grid">
                     
                     <!-- Card 1: Implantes Dentários -->
@@ -448,7 +413,7 @@
                     <article class="service-card service-card-dtm scroll-reveal scroll-reveal-delay-3">
                         <a href="/servicos/dtm-bruxismo-palhoca.html" class="service-card-link">
                             <div class="service-card-image">
-                                <img src="assets/images/dtm-bruxismo-palhoca.webp" alt="DTM e Bruxismo em Palhoça" loading="lazy" />
+                                <img src="assets/images/service-dtm.webp" alt="DTM e Bruxismo em Palhoça" loading="lazy" />
                                 <span class="service-card-number">06</span>
                                 <span class="service-card-kicker">Bem-estar</span>
                             </div>
@@ -525,10 +490,8 @@
                     </article>
 
                 </div>
-                <!-- ✅ FIM DO GRID -->
-
-            </div> <!-- ✅ FIM DO CONTAINER -->
-        </section> <!-- ✅ FIM DA SEÇÃO -->
+            </div>
+        </section>
 
         <!-- ============================================================ -->
         <!-- MÉTODO / DIFERENÇA (VERSÃO PREMIUM COM LINKS) -->
@@ -536,7 +499,6 @@
         <section class="method-premium" id="diferenca">
             <div class="container">
                 
-                <!-- HEADER -->
                 <div class="method-premium-header scroll-reveal">
                     <span class="section-tag">Nosso método</span>
                     <h2 class="method-premium-title">
@@ -545,7 +507,6 @@
                     </h2>
                 </div>
 
-                <!-- CONTEÚDO PRINCIPAL (FOTO + TEXTO) -->
                 <div class="method-premium-content scroll-reveal scroll-reveal-delay-1">
                     <div class="method-premium-image">
                         <div class="method-premium-image-frame">
@@ -571,10 +532,7 @@
                     </div>
                 </div>
 
-                <!-- PILARES (3 CARDS COM LINKS) -->
                 <div class="method-premium-pillars">
-                    
-                    <!-- Pilar 1: Planejamento digital 3D -->
                     <div class="method-premium-pillar scroll-reveal scroll-reveal-delay-1">
                         <div class="method-premium-pillar-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="M12 9v6"/><path d="M9 12h6"/></svg>
@@ -588,7 +546,6 @@
                         </a>
                     </div>
 
-                    <!-- Pilar 2: Consulta sem pressa -->
                     <div class="method-premium-pillar scroll-reveal scroll-reveal-delay-2">
                         <div class="method-premium-pillar-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
@@ -602,7 +559,6 @@
                         </a>
                     </div>
 
-                    <!-- Pilar 3: Garantia por escrito -->
                     <div class="method-premium-pillar scroll-reveal scroll-reveal-delay-3">
                         <div class="method-premium-pillar-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
@@ -615,10 +571,8 @@
                             Saiba mais sobre garantia →
                         </a>
                     </div>
-
                 </div>
 
-                <!-- CTA FINAL -->
                 <div class="method-premium-cta scroll-reveal scroll-reveal-delay-3">
                     <a href="#agendar" class="btn btn-primary">
                         Quero um tratamento que me respeite
@@ -830,12 +784,11 @@
     </main>
 
     <!-- ============================================================ -->
-    <!-- FOOTER - COMPLETO COM TODAS AS ESPECIALIDADES -->
+    <!-- FOOTER - COMPLETO -->
     <!-- ============================================================ -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <!-- Coluna 1: Marca -->
                 <div class="footer-brand">
                     <p class="footer-logo">Clínica Marés</p>
                     <p class="footer-tagline">Odontologia Integrativa · Palhoça, SC</p>
@@ -847,7 +800,6 @@
                     </div>
                 </div>
                 
-                <!-- Coluna 2: Especialidades (TODAS as 10) -->
                 <nav class="footer-nav" aria-label="Especialidades">
                     <p class="footer-nav-title">Especialidades</p>
                     <ul>
@@ -864,7 +816,6 @@
                     </ul>
                 </nav>
                 
-                <!-- Coluna 3: Atendemos -->
                 <nav class="footer-nav" aria-label="Atendemos em Palhoça">
                     <p class="footer-nav-title">📍 Atendemos</p>
                     <ul>
@@ -884,7 +835,6 @@
                     </ul>
                 </nav>
                 
-                <!-- Coluna 4: Contato -->
                 <div class="footer-contact">
                     <p class="footer-nav-title">Contato</p>
                     <ul>
