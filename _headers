@@ -16,7 +16,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
 
   # Controla quais recursos o navegador pode carregar (proteção XSS)
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
 
   # Controla permissões de recursos do navegador
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
