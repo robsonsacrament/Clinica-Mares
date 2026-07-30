@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clínica Marés · Implantes, Estética e Ortodontia em Palhoça</title>
-    <meta name="description" content="Odontologia com planejamento digital em Palhoça: implantes, estética dental e ortodontia conduzidas por especialistas. Consulta inicial sem pressa.">
+    <meta name="description" content="Implantes, estética e ortodontia com planejamento digital 3D em Palhoça. Veja o resultado antes do tratamento. Agende sua avaliação sem pressa.">
     <link rel="canonical" href="https://odonto.rsbprime.com.br/">
 
     <!-- ========== PRÉ-CONEXÕES ========== -->
@@ -12,14 +12,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://odonto.rsbprime.com.br">
 
-    <!-- ========== FONTES ========== -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+/* ===== CSS CRÍTICO ===== */
+.header{position:sticky;top:0;z-index:40;background:rgba(247,245,239,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(219,213,204,.7);transition:box-shadow .3s}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1280px;margin:0 auto;padding:0 24px}
+.logo{display:flex;align-items:baseline;gap:6px}
+.logo-name{font-family:'Playfair Display',ui-serif,Georgia,serif;font-size:22px;letter-spacing:-.02em;color:#2a2824}
+.logo-tagline{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.22em;color:#8c8070}
+.hero-premium{position:relative;padding:60px 0 80px;overflow:hidden;background:#2a2420;border-bottom:1px solid rgba(219,213,204,.7)}
+.hero-background{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
+.hero-background img{width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(42,40,36,.85) 0,rgba(42,40,36,.4) 100%);z-index:1}
+.hero-premium .container{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:0 24px}
+.hero-grid{display:grid;gap:40px;align-items:center}
+.hero-content{display:flex;flex-direction:column;gap:20px}
+.hero-badge{display:inline-flex;align-items:center;gap:12px;font-size:11px;text-transform:uppercase;letter-spacing:.28em;color:rgba(255,255,255,.7)}
+.hero-badge::before{content:'';display:inline-block;width:32px;height:1px;background:rgba(255,255,255,.4)}
+.hero-title{font-family:'Playfair Display',ui-serif,Georgia,serif;font-size:40px;font-weight:500;line-height:1.05;letter-spacing:-.015em;color:#fff}
+.hero-text{font-size:18px;line-height:1.7;color:rgba(255,255,255,.8);max-width:560px}
+.hero-text strong{color:#fff}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 28px;border-radius:9999px;font-size:14px;font-weight:500;font-family:'Inter',ui-sans-serif,system-ui,sans-serif;border:none;cursor:pointer;transition:.3s cubic-bezier(.16,1,.3,1);text-decoration:none;line-height:1}
+.btn-primary{background:#5f8b7a;color:#f7f5ef;box-shadow:0 4px 10px rgba(61,107,90,.2)}
+.btn-primary:hover{background:#3d6b5a;transform:translateY(-3px) scale(1.02);box-shadow:0 8px 25px rgba(61,107,90,.4)}
+.btn-hero{padding:14px 36px;font-size:15px;font-weight:600}
+.btn-link-hero{font-size:14px;color:rgba(255,255,255,.8);text-decoration:underline;text-underline-offset:6px;text-decoration-color:rgba(255,255,255,.3);transition:color .2s,text-decoration-color .2s}
+.btn-link-hero:hover{color:#fff;text-decoration-color:rgba(255,255,255,.6)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:480px;padding-top:32px;margin-top:8px;border-top:1px solid rgba(255,255,255,.15)}
+.hero-stat{display:flex;flex-direction:column;gap:2px}
+.hero-stat-number{display:block;font-family:'Playfair Display',ui-serif,Georgia,serif;font-size:28px;color:#fff}
+.hero-stat-label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.5)}
+.hero-image-wrapper{position:relative;display:flex;justify-content:flex-end;align-items:center;min-height:400px}
+.hero-image-backdrop{position:absolute;width:90%;height:85%;background:#f3ece5;border-radius:60px 0;top:8%;right:-4%;z-index:0}
+.hero-image-frame{position:relative;z-index:1;width:92%;aspect-ratio:4/5;border-radius:8px 48px;overflow:hidden;box-shadow:0 35px 80px rgba(0,0,0,.35);transition:box-shadow .4s,transform .4s}
+.hero-image{width:100%;height:100%;object-fit:cover;display:block}
+.hero-image-caption{position:absolute;bottom:24px;left:24px;right:24px;background:rgba(250,248,244,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:16px 20px;border-radius:4px;max-width:260px;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.hero-image-caption .caption-text{font-family:'Playfair Display',ui-serif,Georgia,serif;font-size:14px;font-style:italic;line-height:1.4;color:#2a2824;margin:0}
+.hero-image-caption .caption-author{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:#8c8070;margin-top:6px}
+@media (min-width:1024px){.hero-premium{padding:100px 0 120px}.hero-title{font-size:64px}}
+@media (max-width:767px){.hero-premium{padding:40px 0 56px!important}.hero-title{font-size:24px!important;line-height:1.1!important}.hero-text{font-size:14px!important;line-height:1.5!important}}
+</style>
 
-    <!-- ========== CSS ========== -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- ========== PRÉ-CONEXÕES ========== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- ========== SCHEMA.ORG JSON-LD ========== -->
+<!-- ========== FONTES - APENAS PESOS ESSENCIAIS ========== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+   
+<!-- ========== CSS ASSÍNCRONO ========== -->
+    <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css/style.min.css">
+    </noscript>
+
+    <!-- ========== SCHEMA.ORG ========== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -64,7 +112,7 @@
 
     <!-- ========== OPEN GRAPH ========== -->
     <meta property="og:title" content="Clínica Marés · Implantes, Estética e Ortodontia em Palhoça">
-    <meta property="og:description" content="Odontologia com planejamento digital em Palhoça: implantes, estética dental e ortodontia conduzidas por especialistas.">
+    <meta property="og:description" content="Implantes, estética e ortodontia com planejamento digital 3D em Palhoça. Veja o resultado antes do tratamento. Agende sua avaliação sem pressa.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://odonto.rsbprime.com.br/">
     <meta property="og:image" content="https://odonto.rsbprime.com.br/assets/images/og-clinic.webp">
@@ -76,84 +124,92 @@
     <!-- ========== TWITTER CARD ========== -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Clínica Marés · Implantes, Estética e Ortodontia em Palhoça">
-    <meta name="twitter:description" content="Odontologia com planejamento digital em Palhoça: implantes, estética dental e ortodontia conduzidas por especialistas.">
+    <meta name="twitter:description" content="Implantes, estética e ortodontia com planejamento digital 3D em Palhoça. Veja o resultado antes do tratamento.">
     <meta name="twitter:image" content="https://odonto.rsbprime.com.br/assets/images/og-clinic.webp">
 
 </head>
 <body>
+    <!-- ... SEU CONTEÚDO ... -->
 
- <!-- ============================================================ -->
-<!-- HEADER / NAVEGAÇÃO -->
-<!-- ============================================================ -->
-<header class="header" id="header">
-    <div class="container header-inner">
-        <a href="/" class="logo">
-            <span class="logo-name">Marés</span>
-            <span class="logo-tagline">Odontologia</span>
-        </a>
-        
-        <nav class="nav-desktop" aria-label="Principal">
-            <!-- ===== DROPDOWN: ESPECIALIDADES ===== -->
-            <div class="nav-dropdown">
-                <a href="#" class="nav-dropdown-trigger">
-                    Especialidades
-                    <span class="dropdown-arrow">▾</span>
-                </a>
-                <div class="nav-dropdown-menu">
-                    <a href="/servicos/implantes-dentarios-palhoca.html">Implantes Dentários</a>
-                    <a href="/servicos/estetica-dental-palhoca.html">Estética Dental</a>
-                    <a href="/servicos/ortodontia-palhoca.html">Ortodontia</a>
-                    <a href="/servicos/clinica-geral-palhoca.html">Clínica Geral</a>
-                    <a href="/servicos/endodontia-palhoca.html">Endodontia</a>
-                    <a href="/servicos/dtm-bruxismo-palhoca.html">DTM / Bruxismo</a>
-                    <a href="/servicos/odontopediatria-palhoca.html">Odontopediatria</a>
-                    <a href="/servicos/cirurgia-oral-palhoca.html">Cirurgia Oral</a>
-                    <a href="/servicos/periodontia-palhoca.html">Periodontia</a>
-                    <a href="/servicos/planejamento-digital-3d.html">Planejamento 3D</a>
-                </div>
-            </div>
+    <!-- ========== SCRIPTS COM DEFER ========== -->
+    <script src="js/main.js" defer></script>
+    <script src="js/before-after.js" defer></script>
+    <script src="js/faq.js" defer></script>
+</body>
+</html>
 
-            <!-- ===== LINKS DIRETOS ===== -->
-            <a href="#diferenca" class="nav-link">Método</a>
-            <a href="#caso" class="nav-link">Casos</a>
-            <a href="/blog/" class="nav-link">Blog</a>
-            <a href="#faq" class="nav-link">FAQ</a>
-            
-            <!-- ===== DROPDOWN: ONDE ATENDEMOS ===== -->
-            <div class="nav-dropdown">
-                <a href="#" class="nav-dropdown-trigger">
-                    Onde Atendemos
-                    <span class="dropdown-arrow">▾</span>
-                </a>
-                <div class="nav-dropdown-menu">
-                    <a href="/bairros/bela-vista.html">Bela Vista</a>
-                    <a href="/bairros/pagani.html">Pagani</a>
-                    <a href="/bairros/pedra-branca.html">Pedra Branca</a>
-                    <a href="/bairros/guarda-do-cubatao.html">Guarda do Cubatão</a>
-                    <a href="/bairros/aririu.html">Aririú</a>
-                    <a href="/bairros/caminho-novo.html">Caminho Novo</a>
-                    <a href="/bairros/ponte-do-imaruim.html">Ponte do Imaruim</a>
-                    <a href="/bairros/jardim-eldorado.html">Jardim Eldorado</a>
-                    <a href="/bairros/centro-palhoca.html">Centro</a>
-                </div>
-            </div>
-        </nav>
-        
-        <div class="header-actions">
-            <a href="tel:+5548988728153" class="header-phone">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                (48) 98872-8153
+    <!-- ============================================================ -->
+    <!-- HEADER / NAVEGAÇÃO -->
+    <!-- ============================================================ -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="logo-name">Marés</span>
+                <span class="logo-tagline">Odontologia</span>
             </a>
-            <a href="#agendar" class="btn btn-primary btn-sm header-cta">Agendar avaliação</a>
             
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <nav class="nav-desktop" aria-label="Principal">
+                <!-- ===== DROPDOWN: ESPECIALIDADES ===== -->
+                <div class="nav-dropdown">
+                    <span class="nav-dropdown-trigger">
+                        Especialidades
+                        <span class="dropdown-arrow">▾</span>
+                    </span>
+                    <div class="nav-dropdown-menu">
+                        <a href="/servicos/implantes-dentarios-palhoca.html">Implantes Dentários</a>
+                        <a href="/servicos/estetica-dental-palhoca.html">Estética Dental</a>
+                        <a href="/servicos/ortodontia-palhoca.html">Ortodontia</a>
+                        <a href="/servicos/clinica-geral-palhoca.html">Clínica Geral</a>
+                        <a href="/servicos/endodontia-palhoca.html">Endodontia</a>
+                        <a href="/servicos/dtm-bruxismo-palhoca.html">DTM / Bruxismo</a>
+                        <a href="/servicos/odontopediatria-palhoca.html">Odontopediatria</a>
+                        <a href="/servicos/cirurgia-oral-palhoca.html">Cirurgia Oral</a>
+                        <a href="/servicos/periodontia-palhoca.html">Periodontia</a>
+                        <a href="/servicos/planejamento-digital-3d.html">Planejamento 3D</a>
+                    </div>
+                </div>
+
+                <!-- ===== LINKS DIRETOS ===== -->
+                <a href="#diferenca" class="nav-link">Método</a>
+                <a href="#caso" class="nav-link">Casos</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                
+                <!-- ===== DROPDOWN: ONDE ATENDEMOS ===== -->
+                <div class="nav-dropdown">
+                    <span class="nav-dropdown-trigger">
+                        Onde Atendemos
+                        <span class="dropdown-arrow">▾</span>
+                    </span>
+                    <div class="nav-dropdown-menu">
+                        <a href="/bairros/bela-vista.html">Bela Vista</a>
+                        <a href="/bairros/pagani.html">Pagani</a>
+                        <a href="/bairros/pedra-branca.html">Pedra Branca</a>
+                        <a href="/bairros/guarda-do-cubatao.html">Guarda do Cubatão</a>
+                        <a href="/bairros/aririu.html">Aririú</a>
+                        <a href="/bairros/caminho-novo.html">Caminho Novo</a>
+                        <a href="/bairros/ponte-do-imaruim.html">Ponte do Imaruim</a>
+                        <a href="/bairros/jardim-eldorado.html">Jardim Eldorado</a>
+                        <a href="/bairros/centro-palhoca.html">Centro</a>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="tel:+5548988728153" class="header-phone">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    (48) 98872-8153
+                </a>
+                <a href="#agendar" class="btn btn-primary btn-sm header-cta">Agendar avaliação</a>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <!-- ============================================================ -->
     <!-- MENU MOBILE - 2 COLUNAS -->
@@ -210,367 +266,368 @@
 
     <main>
         <!-- ============================================================ -->
-<!-- HERO - COM IMAGEM DE FUNDO E OVERLAY -->
-<!-- ============================================================ -->
-<section class="hero hero-premium" id="top">
-    <div class="hero-background">
-        <img src="assets/images/clinicapalhocaimagem.png" alt="Consultório da Clínica Marés com luz natural" loading="eager" fetchpriority="high" />
-        <div class="hero-overlay"></div>
-    </div>
-    <div class="container">
-        <div class="hero-grid">
-            <div class="hero-content scroll-reveal">
-                <span class="hero-badge">📍 Clínica Marés · Palhoça</span>
-                <h1 class="hero-title" id="typewriter-title">
-                    <span class="typewriter-text"></span>
-                </h1>
-                <p class="hero-text">
-                    <strong>Você entende cada etapa, vê a simulação do resultado e só então decide.</strong> Atendimento com <strong>planejamento 3D</strong>, <strong>cirurgia guiada</strong> e avaliação inicial detalhada — para você entender o tratamento antes de decidir.
-                </p>
-                <div class="hero-actions">
-                    <a href="#agendar" class="btn btn-primary btn-hero">
-                        Agendar avaliação gratuita
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                    </a>
-                    <a href="#caso" class="btn-link-hero">Ver resultados reais →</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="hero-stat scroll-reveal scroll-reveal-delay-1">
-                        <span class="hero-stat-number counter" data-target="2011">0</span>
-                        <span class="hero-stat-label">Atuando desde</span>
-                    </div>
-                    <div class="hero-stat scroll-reveal scroll-reveal-delay-2">
-                        <span class="hero-stat-number counter" data-target="1200">0</span>
-                        <span class="hero-stat-label">Reabilitações</span>
-                    </div>
-                    <div class="hero-stat scroll-reveal scroll-reveal-delay-3">
-                        <span class="hero-stat-number">4,9</span>
-                        <span class="hero-stat-label">Avaliação Google</span>
-                    </div>
-                </div>
+        <!-- HERO - COM IMAGEM DE FUNDO E OVERLAY -->
+        <!-- ============================================================ -->
+        <section class="hero hero-premium" id="top">
+            <div class="hero-background">
+                <img src="assets/images/clinicapalhocaimagem.webp" alt="Consultório da Clínica Marés com luz natural" loading="eager" fetchpriority="high" />
+                <div class="hero-overlay"></div>
             </div>
-            <div class="hero-image-wrapper scroll-reveal scroll-reveal-delay-2">
-                <div class="hero-image-backdrop"></div>
-                <div class="hero-image-frame">
-                    <img src="assets/images/clinicapalhocaimagem.png" alt="Consultório da Clínica Marés" loading="eager" fetchpriority="high" class="hero-image" width="800" height="1000" />
-                    <div class="hero-image-caption">
-                        <p class="caption-text">"Ambiente moderno, cuidado humano e precisão técnica."</p>
-                        <p class="caption-author">Clínica Marés · Palhoça</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- SERVIÇOS / ESPECIALIDADES -->
-<!-- ============================================================ -->
-<section class="services" id="especialidades">
-    <div class="container">
-        <div class="services-header">
-            <div class="services-header-left scroll-reveal">
-                <span class="section-tag">Odontologia integrada em Palhoça</span>
-                <h2 class="section-title">
-                    Dez especialidades.<br />
-                    <em>Um mesmo cuidado.</em>
-                </h2>
-                <p style="font-size:16px;color:var(--stone-700);max-width:480px;margin-top:8px;">
-                    Implantes, estética, ortodontia e mais com planejamento digital em Palhoça.
-                </p>
-            </div>
-            <div class="services-header-right scroll-reveal scroll-reveal-delay-1">
-                <div class="services-highlight">
-                    <span class="services-highlight-arrow">→</span>
-                    <div class="services-highlight-content">
-                        <p class="services-highlight-main">
-                            Da prevenção à reabilitação completa.
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content scroll-reveal">
+                        <span class="hero-badge">📍 Clínica Marés · Palhoça</span>
+                        <h1 class="hero-title" id="typewriter-title">
+                            <span class="typewriter-text"></span>
+                        </h1>
+                        <p class="hero-text">
+                            <strong>Você entende cada etapa, vê a simulação do resultado e só então decide.</strong> Atendimento com <strong>planejamento 3D</strong>, <strong>cirurgia guiada</strong> e avaliação inicial detalhada — para você entender o tratamento antes de decidir.
                         </p>
-                        <ul class="services-highlight-list">
-                            <li>Cada tratamento é conduzido por um especialista dedicado, com planejamento precisão e segurança em cada etapa.</li>
-                            <li>Atendimento humanizado, tecnologia de ponta e uma equipe de especialistas para cuidar de você e de toda a sua família em <strong>Palhoça</strong>.</li>
-                        </ul>
-                        <div class="services-highlight-cta">
-                            <a href="#agendar" class="btn btn-primary">
-                                Agendar agora
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                        <div class="hero-actions">
+                            <a href="#agendar" class="btn btn-primary btn-hero">
+                                Agendar avaliação gratuita
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
                             </a>
-                            <span class="services-highlight-cta-text">Sua avaliação com planejamento 3D</span>
+                            <a href="#caso" class="btn-link-hero">Ver resultados reais →</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="hero-stat scroll-reveal scroll-reveal-delay-1">
+                                <span class="hero-stat-number counter" data-target="2011">0</span>
+                                <span class="hero-stat-label">Atuando desde</span>
+                            </div>
+                            <div class="hero-stat scroll-reveal scroll-reveal-delay-2">
+                                <span class="hero-stat-number counter" data-target="1200">0</span>
+                                <span class="hero-stat-label">Reabilitações</span>
+                            </div>
+                            <div class="hero-stat scroll-reveal scroll-reveal-delay-3">
+                                <span class="hero-stat-number">4,9</span>
+                                <span class="hero-stat-label">Avaliação Google</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image-wrapper scroll-reveal scroll-reveal-delay-2">
+                        <div class="hero-image-backdrop"></div>
+                        <div class="hero-image-frame">
+                            <!-- IMAGEM DO CONSULTÓRIO - CARREGADA UMA ÚNICA VEZ -->
+                            <img src="assets/images/clinicapalhocaimagem.webp" alt="Consultório da Clínica Marés" loading="lazy" class="hero-image" width="800" height="1000" />
+                            <div class="hero-image-caption">
+                                <p class="caption-text">"Ambiente moderno, cuidado humano e precisão técnica."</p>
+                                <p class="caption-author">Clínica Marés · Palhoça</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="services-divider"></div>
-
-        <!-- ✅ GRID DE SERVIÇOS - AGORA DENTRO DO CONTAINER -->
-        <div class="services-grid">
-            
-            <!-- Card 1: Implantes Dentários -->
-            <article class="service-card service-card-implantes scroll-reveal scroll-reveal-delay-1">
-                <a href="/servicos/implantes-dentarios-palhoca.html" class="service-card-link">
-                    <div class="service-card-image">
-                        <img src="assets/images/service-implantes.webp" alt="Implantes Dentários em Palhoça" loading="lazy" />
-                        <span class="service-card-number">01</span>
-                        <span class="service-card-kicker">Reabilitação</span>
+        <!-- ============================================================ -->
+        <!-- SERVIÇOS / ESPECIALIDADES -->
+        <!-- ============================================================ -->
+        <section class="services" id="especialidades">
+            <div class="container">
+                <div class="services-header">
+                    <div class="services-header-left scroll-reveal">
+                        <span class="section-tag">Odontologia integrada em Palhoça</span>
+                        <h2 class="section-title">
+                            Dez especialidades.<br />
+                            <em>Um mesmo cuidado.</em>
+                        </h2>
+                        <p style="font-size:16px;color:var(--stone-700);max-width:480px;margin-top:8px;">
+                            Implantes, estética, ortodontia e mais com planejamento digital em Palhoça.
+                        </p>
                     </div>
-                    <div class="service-card-body">
-                        <h3 class="service-card-title">Implantes Dentários</h3>
-                        <p class="service-card-text">Recupere a função mastigatória e a estética do sorriso com implantes de alta precisão em Palhoça.</p>
-                        <p class="service-card-bullet">Planejamento 3D, cirurgia guiada e prótese provisória no mesmo dia.</p>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Card 2: Estética Dental -->
-            <article class="service-card service-card-estetica scroll-reveal scroll-reveal-delay-2">
-                <a href="/servicos/estetica-dental-palhoca.html" class="service-card-link">
-                    <div class="service-card-image">
-                        <img src="assets/images/service-estetica.webp" alt="Estética Dental em Palhoça" loading="lazy" />
-                        <span class="service-card-number">02</span>
-                        <span class="service-card-kicker">Sorriso</span>
-                    </div>
-                    <div class="service-card-body">
-                        <h3 class="service-card-title">Estética Dental</h3>
-                        <p class="service-card-text">Lentes, facetas e clareamento para transformar seu sorriso com naturalidade em Palhoça.</p>
-                        <p class="service-card-bullet">Planejamento facial, mock-up digital e resultado natural garantido.</p>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Card 3: Ortodontia -->
-            <article class="service-card service-card-ortodontia scroll-reveal scroll-reveal-delay-3">
-                <a href="/servicos/ortodontia-palhoca.html" class="service-card-link">
-                    <div class="service-card-image">
-                        <img src="assets/images/service-ortodontia.webp" alt="Ortodontia em Palhoça" loading="lazy" />
-                        <span class="service-card-number">03</span>
-                        <span class="service-card-kicker">Alinhamento</span>
-                    </div>
-                    <div class="service-card-body">
-                        <h3 class="service-card-title">Ortodontia</h3>
-                        <p class="service-card-text">Invisalign e aparelho fixo para alinhar seus dentes com conforto e discrição.</p>
-                        <p class="service-card-bullet">Simulação 3D, escaneamento intraoral e primeiro alinhador em até 3 semanas.</p>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Card 4: Clínica Geral -->
-            <article class="service-card service-card-clinica scroll-reveal scroll-reveal-delay-1">
-                <a href="/servicos/clinica-geral-palhoca.html" class="service-card-link">
-                    <div class="service-card-image">
-                        <img src="assets/images/service-clinica-geral.webp" alt="Clínica Geral em Palhoça" loading="lazy" />
-                        <span class="service-card-number">04</span>
-                        <span class="service-card-kicker">Prevenção</span>
-                    </div>
-                    <div class="service-card-body">
-                        <h3 class="service-card-title">Clínica Geral</h3>
-                        <p class="service-card-text">Prevenção, limpeza, restaurações e manutenção da saúde bucal para toda a família.</p>
-                        <p class="service-card-bullet">Atendimento humanizado, diagnóstico precoce e orientação personalizada.</p>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Card 5: Endodontia -->
-            <article class="service-card service-card-endodontia scroll-reveal scroll-reveal-delay-2">
-                <a href="/servicos/endodontia-palhoca.html" class="service-card-link">
-                    <div class="service-card-image">
-                        <img src="assets/images/service-endodontia.webp" alt="Endodontia em Palhoça" loading="lazy" />
-                        <span class="service-card-number">05</span>
-                        <span class="service-card-kicker">Salvamento</span>
-                    </div>
-                    <div class="service-card-body">
-                        <h3 class="service-card-title">Endodontia</h3>
-                        <p class="service-card-text">Tratamento de canal com microscopia e tecnologia digital para salvar seus dentes.</p>
-                        <p class="service-card-bullet">Procedimento confortável, preciso e com recuperação rápida.</p>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Card 6: DTM / Bruxismo -->
-            <article class="service-card service-card-dtm scroll-reveal scroll-reveal-delay-3">
-                <a href="/servicos/dtm-bruxismo-palhoca.html" class="service-card-link">
-                    <div class="service-card-image">
-                        <img src="assets/images/dtm-bruxismo-palhoca.webp" alt="DTM e Bruxismo em Palhoça" loading="lazy" />
-                        <span class="service-card-number">06</span>
-                        <span class="service-card-kicker">Bem-estar</span>
-                    </div>
-                    <div class="service-card-body">
-                        <h3 class="service-card-title">DTM / Bruxismo</h3>
-                        <p class="service-card-text">Tratamento especializado para dores na face, cabeça e desgaste dental em Palhoça.</p>
-                        <p class="service-card-bullet">Diagnóstico preciso e abordagem multidisciplinar para alívio dos sintomas.</p>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Card 7: Odontopediatria -->
-            <article class="service-card service-card-odontopediatria scroll-reveal scroll-reveal-delay-1">
-                <a href="/servicos/odontopediatria-palhoca.html" class="service-card-link">
-                    <div class="service-card-image">
-                        <img src="assets/images/service-odontopediatria.webp" alt="Odontopediatria em Palhoça" loading="lazy" />
-                        <span class="service-card-number">07</span>
-                        <span class="service-card-kicker">Infância</span>
-                    </div>
-                    <div class="service-card-body">
-                        <h3 class="service-card-title">Odontopediatria</h3>
-                        <p class="service-card-text">Cuidado especializado para crianças, com abordagem lúdica e preventiva.</p>
-                        <p class="service-card-bullet">Primeira consulta a partir dos 6 meses. Orientações para toda a família.</p>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Card 8: Cirurgia Oral -->
-            <article class="service-card service-card-cirurgia scroll-reveal scroll-reveal-delay-2">
-                <a href="/servicos/cirurgia-oral-palhoca.html" class="service-card-link">
-                    <div class="service-card-image">
-                        <img src="assets/images/service-cirurgia.webp" alt="Cirurgia Oral em Palhoça" loading="lazy" />
-                        <span class="service-card-number">08</span>
-                        <span class="service-card-kicker">Precisão</span>
-                    </div>
-                    <div class="service-card-body">
-                        <h3 class="service-card-title">Cirurgia Oral Menor</h3>
-                        <p class="service-card-text">Extrações, sisos e procedimentos cirúrgicos com segurança e conforto.</p>
-                        <p class="service-card-bullet">Técnicas minimamente invasivas e acompanhamento pós-operatório.</p>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Card 9: Periodontia -->
-            <article class="service-card service-card-periodontia scroll-reveal scroll-reveal-delay-3">
-                <a href="/servicos/periodontia-palhoca.html" class="service-card-link">
-                    <div class="service-card-image">
-                        <img src="assets/images/service-periodontia.webp" alt="Periodontia em Palhoça" loading="lazy" />
-                        <span class="service-card-number">09</span>
-                        <span class="service-card-kicker">Saúde Gengival</span>
-                    </div>
-                    <div class="service-card-body">
-                        <h3 class="service-card-title">Periodontia</h3>
-                        <p class="service-card-text">Tratamento de gengivite, periodontite e gengivoplastia estética.</p>
-                        <p class="service-card-bullet">Cuidado especializado para saúde oral duradoura e sorriso harmonioso.</p>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Card 10: Emergência Odontológica -->
-            <article class="service-card service-card-emergencia scroll-reveal scroll-reveal-delay-1">
-                <a href="/servicos/emergencia-odontologica-palhoca.html" class="service-card-link">
-                    <div class="service-card-image">
-                        <img src="assets/images/service-emergencia.webp" alt="Emergência Odontológica em Palhoça" loading="lazy" />
-                        <span class="service-card-number">10</span>
-                        <span class="service-card-kicker">Atendimento Imediato</span>
-                    </div>
-                    <div class="service-card-body">
-                        <h3 class="service-card-title">Emergência Odontológica</h3>
-                        <p class="service-card-text">Dores agudas, fraturas e traumas com atendimento rápido e eficaz.</p>
-                        <p class="service-card-bullet">Pronto atendimento em Palhoça para alívio da dor e tratamento definitivo.</p>
-                    </div>
-                </a>
-            </article>
-
-        </div>
-        <!-- ✅ FIM DO GRID -->
-
-    </div> <!-- ✅ FIM DO CONTAINER -->
-</section> <!-- ✅ FIM DA SEÇÃO -->
-
-<!-- ============================================================ -->
-<!-- MÉTODO / DIFERENÇA (VERSÃO PREMIUM COM LINKS) -->
-<!-- ============================================================ -->
-<section class="method-premium" id="diferenca">
-    <div class="container">
-        
-        <!-- HEADER -->
-        <div class="method-premium-header scroll-reveal">
-            <span class="section-tag">Nosso método</span>
-            <h2 class="method-premium-title">
-                O que a gente <span class="section-title-em">NÃO faz</span><br />
-                diz mais do que a gente faz.
-            </h2>
-        </div>
-
-        <!-- CONTEÚDO PRINCIPAL (FOTO + TEXTO) -->
-        <div class="method-premium-content scroll-reveal scroll-reveal-delay-1">
-            <div class="method-premium-image">
-                <div class="method-premium-image-frame">
-                    <img src="assets/images/dr-rafael.webp" alt="Dr. Rafael Marés - Mestre em Implantodontia pela UFSC" loading="lazy" />
-                    <div class="method-premium-image-badge">
-                        <span class="method-premium-image-badge-name">Dr. Rafael Marés</span>
-                        <span class="method-premium-image-badge-title">Mestre em Implantodontia · CRO-SC 12.998</span>
+                    <div class="services-header-right scroll-reveal scroll-reveal-delay-1">
+                        <div class="services-highlight">
+                            <span class="services-highlight-arrow">→</span>
+                            <div class="services-highlight-content">
+                                <p class="services-highlight-main">
+                                    Da prevenção à reabilitação completa.
+                                </p>
+                                <ul class="services-highlight-list">
+                                    <li>Cada tratamento é conduzido por um especialista dedicado, com planejamento precisão e segurança em cada etapa.</li>
+                                    <li>Atendimento humanizado, tecnologia de ponta e uma equipe de especialistas para cuidar de você e de toda a sua família em <strong>Palhoça</strong>.</li>
+                                </ul>
+                                <div class="services-highlight-cta">
+                                    <a href="#agendar" class="btn btn-primary">
+                                        Agendar agora
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                                    </a>
+                                    <span class="services-highlight-cta-text">Sua avaliação com planejamento 3D</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="method-premium-text">
-                <p class="method-premium-text-highlight">
-                    Não vendemos pacote. Não abrimos boca sem exame. Não chamamos de "urgência" o que pode esperar uma segunda opinião.
-                </p>
-                <p>
-                    O tratamento começa quando você entende exatamente o que vai acontecer, quanto custa e por que faz sentido para o seu caso.
-                </p>
-                <p class="method-premium-text-author">
-                    Conduzido pelo <strong>Dr. Rafael Marés</strong> — Mestre em Implantodontia pela UFSC (CRO-SC 12.998), com uma equipe de quatro especialistas dedicados exclusivamente à clínica.
-                    <br />
-                    <a href="/sobre-nos.html" class="method-premium-text-link">Conheça nossa equipe →</a>
-                </p>
-            </div>
-        </div>
 
-        <!-- PILARES (3 CARDS COM LINKS) -->
-        <div class="method-premium-pillars">
-            
-            <!-- Pilar 1: Planejamento digital 3D -->
-            <div class="method-premium-pillar scroll-reveal scroll-reveal-delay-1">
-                <div class="method-premium-pillar-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="M12 9v6"/><path d="M9 12h6"/></svg>
+                <div class="services-divider"></div>
+
+                <!-- ✅ GRID DE SERVIÇOS -->
+                <div class="services-grid">
+                    
+                    <!-- Card 1: Implantes Dentários -->
+                    <article class="service-card service-card-implantes scroll-reveal scroll-reveal-delay-1">
+                        <a href="/servicos/implantes-dentarios-palhoca.html" class="service-card-link">
+                            <div class="service-card-image">
+                                <img src="assets/images/service-implantes.webp" alt="Implantes Dentários em Palhoça" loading="lazy" />
+                                <span class="service-card-number">01</span>
+                                <span class="service-card-kicker">Reabilitação</span>
+                            </div>
+                            <div class="service-card-body">
+                                <h3 class="service-card-title">Implantes Dentários</h3>
+                                <p class="service-card-text">Recupere a função mastigatória e a estética do sorriso com implantes de alta precisão em Palhoça.</p>
+                                <p class="service-card-bullet">Planejamento 3D, cirurgia guiada e prótese provisória no mesmo dia.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 2: Estética Dental -->
+                    <article class="service-card service-card-estetica scroll-reveal scroll-reveal-delay-2">
+                        <a href="/servicos/estetica-dental-palhoca.html" class="service-card-link">
+                            <div class="service-card-image">
+                                <img src="assets/images/service-estetica.webp" alt="Estética Dental em Palhoça" loading="lazy" />
+                                <span class="service-card-number">02</span>
+                                <span class="service-card-kicker">Sorriso</span>
+                            </div>
+                            <div class="service-card-body">
+                                <h3 class="service-card-title">Estética Dental</h3>
+                                <p class="service-card-text">Lentes, facetas e clareamento para transformar seu sorriso com naturalidade em Palhoça.</p>
+                                <p class="service-card-bullet">Planejamento facial, mock-up digital e resultado natural garantido.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 3: Ortodontia -->
+                    <article class="service-card service-card-ortodontia scroll-reveal scroll-reveal-delay-3">
+                        <a href="/servicos/ortodontia-palhoca.html" class="service-card-link">
+                            <div class="service-card-image">
+                                <img src="assets/images/service-ortodontia.webp" alt="Ortodontia em Palhoça" loading="lazy" />
+                                <span class="service-card-number">03</span>
+                                <span class="service-card-kicker">Alinhamento</span>
+                            </div>
+                            <div class="service-card-body">
+                                <h3 class="service-card-title">Ortodontia</h3>
+                                <p class="service-card-text">Invisalign e aparelho fixo para alinhar seus dentes com conforto e discrição.</p>
+                                <p class="service-card-bullet">Simulação 3D, escaneamento intraoral e primeiro alinhador em até 3 semanas.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 4: Clínica Geral -->
+                    <article class="service-card service-card-clinica scroll-reveal scroll-reveal-delay-1">
+                        <a href="/servicos/clinica-geral-palhoca.html" class="service-card-link">
+                            <div class="service-card-image">
+                                <img src="assets/images/service-clinica-geral.webp" alt="Clínica Geral em Palhoça" loading="lazy" />
+                                <span class="service-card-number">04</span>
+                                <span class="service-card-kicker">Prevenção</span>
+                            </div>
+                            <div class="service-card-body">
+                                <h3 class="service-card-title">Clínica Geral</h3>
+                                <p class="service-card-text">Prevenção, limpeza, restaurações e manutenção da saúde bucal para toda a família.</p>
+                                <p class="service-card-bullet">Atendimento humanizado, diagnóstico precoce e orientação personalizada.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 5: Endodontia -->
+                    <article class="service-card service-card-endodontia scroll-reveal scroll-reveal-delay-2">
+                        <a href="/servicos/endodontia-palhoca.html" class="service-card-link">
+                            <div class="service-card-image">
+                                <img src="assets/images/service-endodontia.webp" alt="Endodontia em Palhoça" loading="lazy" />
+                                <span class="service-card-number">05</span>
+                                <span class="service-card-kicker">Salvamento</span>
+                            </div>
+                            <div class="service-card-body">
+                                <h3 class="service-card-title">Endodontia</h3>
+                                <p class="service-card-text">Tratamento de canal com microscopia e tecnologia digital para salvar seus dentes.</p>
+                                <p class="service-card-bullet">Procedimento confortável, preciso e com recuperação rápida.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 6: DTM / Bruxismo -->
+                    <article class="service-card service-card-dtm scroll-reveal scroll-reveal-delay-3">
+                        <a href="/servicos/dtm-bruxismo-palhoca.html" class="service-card-link">
+                            <div class="service-card-image">
+                                <img src="assets/images/dtm-bruxismo-palhoca.webp" alt="DTM e Bruxismo em Palhoça" loading="lazy" />
+                                <span class="service-card-number">06</span>
+                                <span class="service-card-kicker">Bem-estar</span>
+                            </div>
+                            <div class="service-card-body">
+                                <h3 class="service-card-title">DTM / Bruxismo</h3>
+                                <p class="service-card-text">Tratamento especializado para dores na face, cabeça e desgaste dental em Palhoça.</p>
+                                <p class="service-card-bullet">Diagnóstico preciso e abordagem multidisciplinar para alívio dos sintomas.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 7: Odontopediatria -->
+                    <article class="service-card service-card-odontopediatria scroll-reveal scroll-reveal-delay-1">
+                        <a href="/servicos/odontopediatria-palhoca.html" class="service-card-link">
+                            <div class="service-card-image">
+                                <img src="assets/images/service-odontopediatria.webp" alt="Odontopediatria em Palhoça" loading="lazy" />
+                                <span class="service-card-number">07</span>
+                                <span class="service-card-kicker">Infância</span>
+                            </div>
+                            <div class="service-card-body">
+                                <h3 class="service-card-title">Odontopediatria</h3>
+                                <p class="service-card-text">Cuidado especializado para crianças, com abordagem lúdica e preventiva.</p>
+                                <p class="service-card-bullet">Primeira consulta a partir dos 6 meses. Orientações para toda a família.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 8: Cirurgia Oral -->
+                    <article class="service-card service-card-cirurgia scroll-reveal scroll-reveal-delay-2">
+                        <a href="/servicos/cirurgia-oral-palhoca.html" class="service-card-link">
+                            <div class="service-card-image">
+                                <img src="assets/images/service-cirurgia.webp" alt="Cirurgia Oral em Palhoça" loading="lazy" />
+                                <span class="service-card-number">08</span>
+                                <span class="service-card-kicker">Precisão</span>
+                            </div>
+                            <div class="service-card-body">
+                                <h3 class="service-card-title">Cirurgia Oral Menor</h3>
+                                <p class="service-card-text">Extrações, sisos e procedimentos cirúrgicos com segurança e conforto.</p>
+                                <p class="service-card-bullet">Técnicas minimamente invasivas e acompanhamento pós-operatório.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 9: Periodontia -->
+                    <article class="service-card service-card-periodontia scroll-reveal scroll-reveal-delay-3">
+                        <a href="/servicos/periodontia-palhoca.html" class="service-card-link">
+                            <div class="service-card-image">
+                                <img src="assets/images/service-periodontia.webp" alt="Periodontia em Palhoça" loading="lazy" />
+                                <span class="service-card-number">09</span>
+                                <span class="service-card-kicker">Saúde Gengival</span>
+                            </div>
+                            <div class="service-card-body">
+                                <h3 class="service-card-title">Periodontia</h3>
+                                <p class="service-card-text">Tratamento de gengivite, periodontite e gengivoplastia estética.</p>
+                                <p class="service-card-bullet">Cuidado especializado para saúde oral duradoura e sorriso harmonioso.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 10: Emergência Odontológica -->
+                    <article class="service-card service-card-emergencia scroll-reveal scroll-reveal-delay-1">
+                        <a href="/servicos/emergencia-odontologica-palhoca.html" class="service-card-link">
+                            <div class="service-card-image">
+                                <img src="assets/images/service-emergencia.webp" alt="Emergência Odontológica em Palhoça" loading="lazy" />
+                                <span class="service-card-number">10</span>
+                                <span class="service-card-kicker">Atendimento Imediato</span>
+                            </div>
+                            <div class="service-card-body">
+                                <h3 class="service-card-title">Emergência Odontológica</h3>
+                                <p class="service-card-text">Dores agudas, fraturas e traumas com atendimento rápido e eficaz.</p>
+                                <p class="service-card-bullet">Pronto atendimento em Palhoça para alívio da dor e tratamento definitivo.</p>
+                            </div>
+                        </a>
+                    </article>
+
                 </div>
-                <h3 class="method-premium-pillar-title">Planejamento digital 3D</h3>
-                <p class="method-premium-pillar-text">
-                    <strong>Você vê o resultado antes de começar.</strong> Tomografia, escaneamento intraoral e simulação precisa do seu novo sorriso.
-                </p>
-                <a href="/servicos/planejamento-digital-3d.html" class="method-premium-pillar-link">
-                    Saiba mais sobre planejamento 3D →
-                </a>
-            </div>
+                <!-- ✅ FIM DO GRID -->
 
-            <!-- Pilar 2: Consulta sem pressa -->
-            <div class="method-premium-pillar scroll-reveal scroll-reveal-delay-2">
-                <div class="method-premium-pillar-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div> <!-- ✅ FIM DO CONTAINER -->
+        </section> <!-- ✅ FIM DA SEÇÃO -->
+
+        <!-- ============================================================ -->
+        <!-- MÉTODO / DIFERENÇA (VERSÃO PREMIUM COM LINKS) -->
+        <!-- ============================================================ -->
+        <section class="method-premium" id="diferenca">
+            <div class="container">
+                
+                <!-- HEADER -->
+                <div class="method-premium-header scroll-reveal">
+                    <span class="section-tag">Nosso método</span>
+                    <h2 class="method-premium-title">
+                        O que a gente <span class="section-title-em">NÃO faz</span><br />
+                        diz mais do que a gente faz.
+                    </h2>
                 </div>
-                <h3 class="method-premium-pillar-title">Consulta sem pressa</h3>
-                <p class="method-premium-pillar-text">
-                    <strong>Uma hora dedicada a você.</strong> Entendemos seu histórico, medos e prioridades. Sem lista de procedimentos empurrados.
-                </p>
-                <a href="/servicos/consulta-inicial.html" class="method-premium-pillar-link">
-                    Saiba mais sobre nossa consulta →
-                </a>
-            </div>
 
-            <!-- Pilar 3: Garantia por escrito -->
-            <div class="method-premium-pillar scroll-reveal scroll-reveal-delay-3">
-                <div class="method-premium-pillar-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                <!-- CONTEÚDO PRINCIPAL (FOTO + TEXTO) -->
+                <div class="method-premium-content scroll-reveal scroll-reveal-delay-1">
+                    <div class="method-premium-image">
+                        <div class="method-premium-image-frame">
+                            <img src="assets/images/dr-rafael.webp" alt="Dr. Rafael Marés - Mestre em Implantodontia pela UFSC" loading="lazy" />
+                            <div class="method-premium-image-badge">
+                                <span class="method-premium-image-badge-name">Dr. Rafael Marés</span>
+                                <span class="method-premium-image-badge-title">Mestre em Implantodontia · CRO-SC 12.998</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="method-premium-text">
+                        <p class="method-premium-text-highlight">
+                            Não vendemos pacote. Não abrimos boca sem exame. Não chamamos de "urgência" o que pode esperar uma segunda opinião.
+                        </p>
+                        <p>
+                            O tratamento começa quando você entende exatamente o que vai acontecer, quanto custa e por que faz sentido para o seu caso.
+                        </p>
+                        <p class="method-premium-text-author">
+                            Conduzido pelo <strong>Dr. Rafael Marés</strong> — Mestre em Implantodontia pela UFSC (CRO-SC 12.998), com uma equipe de quatro especialistas dedicados exclusivamente à clínica.
+                            <br />
+                            <a href="/sobre-nos.html" class="method-premium-text-link">Conheça nossa equipe →</a>
+                        </p>
+                    </div>
                 </div>
-                <h3 class="method-premium-pillar-title">Garantia por escrito</h3>
-                <p class="method-premium-pillar-text">
-                    <strong>5 anos de garantia formal.</strong> Todo trabalho protético tem garantia por escrito, com revisões semestrais incluídas.
-                </p>
-                <a href="/servicos/garantia-protetica.html" class="method-premium-pillar-link">
-                    Saiba mais sobre garantia →
-                </a>
+
+                <!-- PILARES (3 CARDS COM LINKS) -->
+                <div class="method-premium-pillars">
+                    
+                    <!-- Pilar 1: Planejamento digital 3D -->
+                    <div class="method-premium-pillar scroll-reveal scroll-reveal-delay-1">
+                        <div class="method-premium-pillar-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="M12 9v6"/><path d="M9 12h6"/></svg>
+                        </div>
+                        <h3 class="method-premium-pillar-title">Planejamento digital 3D</h3>
+                        <p class="method-premium-pillar-text">
+                            <strong>Você vê o resultado antes de começar.</strong> Tomografia, escaneamento intraoral e simulação precisa do seu novo sorriso.
+                        </p>
+                        <a href="/servicos/planejamento-digital-3d.html" class="method-premium-pillar-link">
+                            Saiba mais sobre planejamento 3D →
+                        </a>
+                    </div>
+
+                    <!-- Pilar 2: Consulta sem pressa -->
+                    <div class="method-premium-pillar scroll-reveal scroll-reveal-delay-2">
+                        <div class="method-premium-pillar-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                        </div>
+                        <h3 class="method-premium-pillar-title">Consulta sem pressa</h3>
+                        <p class="method-premium-pillar-text">
+                            <strong>Uma hora dedicada a você.</strong> Entendemos seu histórico, medos e prioridades. Sem lista de procedimentos empurrados.
+                        </p>
+                        <a href="/servicos/consulta-inicial.html" class="method-premium-pillar-link">
+                            Saiba mais sobre nossa consulta →
+                        </a>
+                    </div>
+
+                    <!-- Pilar 3: Garantia por escrito -->
+                    <div class="method-premium-pillar scroll-reveal scroll-reveal-delay-3">
+                        <div class="method-premium-pillar-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </div>
+                        <h3 class="method-premium-pillar-title">Garantia por escrito</h3>
+                        <p class="method-premium-pillar-text">
+                            <strong>5 anos de garantia formal.</strong> Todo trabalho protético tem garantia por escrito, com revisões semestrais incluídas.
+                        </p>
+                        <a href="/servicos/garantia-protetica.html" class="method-premium-pillar-link">
+                            Saiba mais sobre garantia →
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- CTA FINAL -->
+                <div class="method-premium-cta scroll-reveal scroll-reveal-delay-3">
+                    <a href="#agendar" class="btn btn-primary">
+                        Quero um tratamento que me respeite
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
             </div>
-
-        </div>
-
-        <!-- CTA FINAL -->
-        <div class="method-premium-cta scroll-reveal scroll-reveal-delay-3">
-            <a href="#agendar" class="btn btn-primary">
-                Quero um tratamento que me respeite
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            </a>
-        </div>
-
-    </div>
-</section>
+        </section>
 
         <!-- ============================================================ -->
         <!-- CASOS CLÍNICOS -->
@@ -635,8 +692,6 @@
                     <div class="scroll-reveal">
                         <span class="section-tag">Conteúdo que educa</span>
                         <h2 class="section-title">Informação clara para você <em>decidir com confiança</em>.</h2>
-                        
-</p>
                     </div>
                     <a href="/blog/" class="btn-link scroll-reveal scroll-reveal-delay-1">Todos os artigos →</a>
                 </div>
@@ -857,10 +912,11 @@
     </footer>
 
     <!-- ============================================================ -->
-    <!-- SCRIPTS -->
+    <!-- SCRIPTS COM DEFER (NÃO BLOQUEIAM A RENDERIZAÇÃO) -->
     <!-- ============================================================ -->
-    <script src="js/main.js"></script>
-    <script src="js/before-after.js"></script>
-    <script src="js/faq.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/before-after.js" defer></script>
+    <script src="js/faq.js" defer></script>
+
 </body>
 </html>
