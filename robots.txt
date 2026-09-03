@@ -1,0 +1,14 @@
+# ============================================================
+# ROBOTS.TXT - Clínica Marés
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# Bloqueia pastas administrativas
+Disallow: /assets/
+Disallow: /css/
+Disallow: /js/
+
+# Sitemap
+Sitemap: https://odonto.rsbprime.com.br/sitemap.xml
